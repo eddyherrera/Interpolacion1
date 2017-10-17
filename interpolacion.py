@@ -42,7 +42,7 @@ plt.plot(x2,y2)
 plt.subplot(2,1,2)
 
 xx = np.linspace( min(x2), max(x2), 1000)
-tck = sp.splrep(x2, y2, s=0)
+tck = sp.splrep(x2, y2, w=1/0.01,s=1)
 ysp = sp.splev(xx, tck)
 plt.plot(x2,y2,'o')
 plt.plot(xx,ysp)
